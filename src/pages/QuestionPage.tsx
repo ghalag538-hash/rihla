@@ -31,7 +31,7 @@ function QuestionPage({
 
     try {
       const response = await fetch(
-        "https://rihla-backend-qst1.onrender.com/explore",
+        "https://rihla-backend-qs1t.onrender.com/explore",
         {
           method: "POST",
           headers: {
