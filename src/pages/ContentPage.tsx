@@ -100,7 +100,7 @@ function ContentPage({
 
       try {
         const response = await fetch(
-          "http://rihla-backend-qst1.onrender.com/explore",
+          "https://rihla-backend-qs1t.onrender.com/explore",
           {
             method: "POST",
 
@@ -150,7 +150,7 @@ function ContentPage({
 
     try {
       const response = await fetch(
-        "http://rihla-backend-qst1.onrender.com/explore",
+        "https://rihla-backend-qs1t.onrender.com/explore",
         {
           method: "POST",
 
