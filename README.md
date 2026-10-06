@@ -1,32 +1,152 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# 🧭 رِحلة | Rihla
 
-## React Compiler
+### رحلة تفاعلية لاستكشاف المعرفة الإسلامية
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**رِحلة** هي منصة ويب تفاعلية تحول سؤال المستخدم إلى **رحلة معرفية منظمة** تساعده على استكشاف المفاهيم الإسلامية والانتقال بين المفاهيم المرتبطة بها.
 
-## Expanding the Oxlint configuration
+بدلًا من تقديم إجابة نصية واحدة، تهدف رِحلة إلى جعل التعلم أكثر تفاعلية ووضوحًا من خلال عرض المعرفة بطريقة مترابطة وقابلة للاستكشاف.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+
+## 🎯 المشكلة
+
+غالبًا ما تقدم منصات البحث والمحادثة المعلومات على شكل إجابات منفصلة، مما يجعل فهم العلاقة بين المفاهيم واستكشاف الموضوع بشكل تدريجي أكثر صعوبة.
+
+تهدف رِحلة إلى معالجة هذه المشكلة من خلال تحويل السؤال من مجرد استفسار إلى تجربة معرفية تساعد المستخدم على استكشاف الموضوع والمفاهيم المرتبطة به.
+
+
+
+## 💡 الحل
+
+تجمع رِحلة بين **قاعدة معرفة منظمة والذكاء الاصطناعي** لإنشاء تجربة استكشاف تفاعلية.
+
+يُستخدم الذكاء الاصطناعي للمساعدة في فهم سؤال المستخدم ودعم عملية الاستكشاف، بينما يعتمد المحتوى على مصادر وبيانات معرفية منظمة.
+
+
+
+## 🧭 كيف تعمل؟
+
+1. يكتب المستخدم سؤاله أو يختار سؤالًا مقترحًا.
+2. يتم إرسال السؤال إلى الـ Backend.
+3. تتم معالجة السؤال باستخدام منطق المشروع والذكاء الاصطناعي.
+4. يتم إرجاع بيانات الاستكشاف إلى الواجهة.
+5. يستكشف المستخدم المفهوم والمفاهيم المرتبطة به.
+
+
+
+## 🛠️ التقنيات المستخدمة
+
+### Frontend
+- React
+- TypeScript
+- Vite
+- HTML / CSS
+
+### Backend
+- Python
+- FastAPI
+- Uvicorn
+- Pydantic
+
+### AI
+- Google Gemini API
+- Google GenAI SDK
+
+### Data
+- JSON
+- `sources.json`
+
+### Deployment
+- GitHub
+- Netlify
+- Render
+
+
+
+## 📁 هيكل المشروع
+
+
+rihla/
+├── backend/
+│   ├── app.py
+│   ├── requirements.txt
+│   └── sources.json
+├── public/
+├── src/
+│   ├── pages/
+│   └── components/
+├── package.json
+├── vite.config.ts
+└── README.md
+
+
+
+
+## ⚙️ التشغيل محليًا
+
+### المتطلبات
+
+- Node.js
+- Python 3
+- Git
+- Google Gemini API Key
+
+### تشغيل Frontend
+
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### تشغيل Backend
+
+bash
+cd backend
+pip install -r requirements.txt
+uvicorn app:app --reload
+
+
+يجب وضع مفتاح Gemini في متغير بيئي:
+
+env
+GEMINI_API_KEY=your_api_key_here
+
+
+**لا تقم برفع مفاتيح API أو كلمات المرور أو أي بيانات سرية إلى GitHub.**
+
+
+
+## 🌐 الروابط
+
+### التجربة المباشرة
+
+[https://regal-dolphin-50eee6.netlify.app](https://regal-dolphin-50eee6.netlify.app)
+
+### المستودع البرمجي
+
+https://github.com/ghalag538-hash/rihla
+
+### Backend
+
+[https://rihla-backend-qs1t.onrender.com](https://rihla-backend-qs1t.onrender.com)
+
+
+
+## 📚 المصادر
+
+يستخدم المشروع مصادر وبيانات معرفية منظمة ضمن:
+
+backend/sources.json
+
+ويجب التحقق من المحتوى الديني من مصادر موثوقة ومتخصصين قبل استخدام المنصة كمرجع ديني رسمي.
+
+
+
+## 📜 الترخيص
+
+المشروع مقدم لأغراض الهاكاثون والتعليم والتجربة التقنية، وتخضع المكتبات والخدمات الخارجية المستخدمة في المشروع لتراخيصها وشروط استخدامها.
+
+
